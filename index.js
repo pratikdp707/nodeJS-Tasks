@@ -19,6 +19,9 @@ app.use('/api/file/', require('./routes/fileOps'));
 //Task 2 -- Hall Booking API
 app.use('/api/hall-booking-api/', require('./routes/hallBooking'));
 
+//Task 3 -- Assigning mentor and students
+app.use('/api/student-mentor-portal/', require('./routes/assignMentorStudent'));
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
