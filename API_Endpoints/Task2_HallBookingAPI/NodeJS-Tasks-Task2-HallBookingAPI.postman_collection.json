@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "737be4fa-e2db-41d5-9be3-08141a9a6fb8",
+		"name": "NodeJS-Tasks-Task2-HallBookingAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all rooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/hall-booking-api/getAllRooms",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"hall-booking-api",
+						"getAllRooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Premium\",\r\n    \"amenities\" : [\"Fully air conditioned\", \"Projector Screen\", \"Recliners\"],\r\n    \"totalCapacity\": 400,\r\n    \"pricePerHour\": 1700,\r\n    \"bookingDetails\": [{\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/hall-booking-api/createRoom",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"hall-booking-api",
+						"createRoom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking a room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"customerName\": \"Prateek\",\r\n        \"date\": \"2021-11-24\",\r\n        \"startTime\": \"06:00\",\r\n        \"endTime\": \"07:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/hall-booking-api/bookRoom/A-2",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"hall-booking-api",
+						"bookRoom",
+						"A-2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/hall-booking-api/getCustomers",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"hall-booking-api",
+						"getCustomers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

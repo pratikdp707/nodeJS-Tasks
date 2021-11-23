@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "3f7a8f51-73ac-47ba-a9ac-c44a53d7011c",
+		"name": "NodeJS-Tasks-Task1-FileSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Task 1.1 - create a file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/file/createFile",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"file",
+						"createFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task 1.2 - get all files in a directory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/file/getAllFiles",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"file",
+						"getAllFiles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
