@@ -9,13 +9,11 @@ let mentors = [
         id: 'M-1',
         mentorName: "Kalpesh",
         mentorEmail: "kalpesh@guvi.in",
-        students:['S-1','S-2','S-3']
     },
     {
         id: 'M-2',
         mentorName: "Kamlesh",
         mentorEmail: "kamlesh@guvi.in",
-        students:['S-4','S-5','S-6']
     }
 ]
 
