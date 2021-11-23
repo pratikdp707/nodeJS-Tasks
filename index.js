@@ -13,7 +13,10 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
+//Task 1 -- File System
 app.use('/api/file/', require('./routes/fileOps'));
+
+//Task 2 -- Hall Booking API
 app.use('/api/hall-booking-api/', require('./routes/hallBooking'));
 
 app.listen(port, () => {
