@@ -22,6 +22,9 @@ app.use('/api/hall-booking-api/', require('./routes/hallBooking'));
 //Task 3 -- Assigning mentor and students
 app.use('/api/student-mentor-portal/', require('./routes/assignMentorStudent'));
 
+//Task 4 -- Password Reset Task
+app.use('/api/password-reset-task/', require('./routes/passwordReset'))
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
