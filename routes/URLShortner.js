@@ -322,7 +322,7 @@ router.post('/shorten', async(req, res) => {
 //redirect short url to long url --- api/url-shortner/:shortcode
 router.get('/:shortcode', async(req, res) => {
     try{
-        let Url = await url.findOne({shortUrl : `${process.env.BaseURL}${req.params.shortcode}`});
+        let Url = await url.findOne({shortUrl : `${process.env.BaseURL}/${req.params.shortcode}`});
         console.log(Url);
         if(Url){
             Url.clicks = Url.clicks+1;
