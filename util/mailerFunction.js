@@ -1,6 +1,6 @@
 var nodemailer = require("nodemailer");
 require('dotenv').config();
-const mailerFunc = async (toAddress, resetPassLongString) => {
+const mailerFunc = async (toAddress, resetPassLongString, resetURL) => {
   try {
     const transporter = await nodemailer.createTransport({
       service: "gmail",
@@ -18,7 +18,7 @@ const mailerFunc = async (toAddress, resetPassLongString) => {
         to: toAddress,
         subject: "Password Reset Code",
         text: `Do not share your reset code with Others,  Click here to change Password-    
-            ${process.env.RESET_URL}/${resetPassLongString} `,
+            ${resetURL}/${resetPassLongString} `,
       };
 
       const result = await transporter.sendMail(mailOptions);

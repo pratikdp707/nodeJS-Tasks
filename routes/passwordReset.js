@@ -148,7 +148,7 @@ router.post('/forgotPassword', async (req, res) => {
             const authToken = jwt.sign(payload, JWT_SECRET);
             const resetPasswordString = `${result._id}/${authToken}`;
 
-            const emailResponse = await mailerFunc(result.email, resetPasswordString);
+            const emailResponse = await mailerFunc(result.email, resetPasswordString, processe.env.RESET_URL_PSWD);
 
         }
         success = true;

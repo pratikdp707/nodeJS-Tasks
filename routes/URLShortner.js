@@ -217,7 +217,7 @@ router.post('/forgotPassword', async (req, res) => {
             console.log(authToken)
             const resetPasswordString = `${result._id}/${authToken}`;
 
-            const emailResponse = await mailerFunc(result.email, resetPasswordString);
+            const emailResponse = await mailerFunc(result.email, resetPasswordString, process.env.RESET_URL_USHRT);
 
         }
         success = true;
@@ -231,7 +231,7 @@ router.post('/forgotPassword', async (req, res) => {
 
 //ROUTE 6
 //Get token in POST request --- endpoint:api/url-shortner/resetPassword/:id/:token . No Login required
-router.post('/resetPassword/', async (req, res) => {
+router.post('/resetPassword', async (req, res) => {
     const { id, token, password } = req.body;
     //const { password } = req.body;
     try {
@@ -242,15 +242,13 @@ router.post('/resetPassword/', async (req, res) => {
         }
         
         const data = jwt.verify(token, process.env.JWT_SECRET);
-        console.log(data);
         if (id == data.id) {
             const salt = await bcrypt.genSalt(10);
             const secPassword = await bcrypt.hash(password, salt);
-            const result = await User.findByIdAndUpdate(id, {
+            const result = await URLUser.findByIdAndUpdate(id, {
                 $set:{"password":secPassword}
             });
             if (result) {
-                console.log(result);
                 success = true;
                 res.json({ success, "msg": "Your password has been changed" });
             }
