@@ -26,6 +26,9 @@ app.use('/api/student-mentor-portal/', require('./routes/assignMentorStudent'));
 //Task 4 -- Password Reset Task
 app.use('/api/password-reset-task/', require('./routes/passwordReset'))
 
+//Task 5 -- URL Shortner Task
+app.use('/api/url-shortner', require('./routes/URLShortner'));
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
