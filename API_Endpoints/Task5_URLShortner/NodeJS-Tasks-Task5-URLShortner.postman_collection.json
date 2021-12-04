@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "30cef053-4703-44a3-bbcb-bcd6294debba",
+		"name": "NodeJS-Tasks-Task5-URLShortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Pratik Parate\",\r\n    \"email\":\"pratikparate707@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/url-shortner/register",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"url-shortner",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activation URL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/url-shortner/accountActivation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJhdGlrIFBhcmF0ZSIsImVtYWlsIjoicHJhdGlrcDFAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NSIsImlhdCI6MTYzODYyMjc4MCwiZXhwIjoxNjM4NjIzNjgwfQ.hRSR7rZ_N9ZqbQnw6AA2e5EmUGsGXrJQ8M5Rtf7I8Zw",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"url-shortner",
+						"accountActivation",
+						"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUHJhdGlrIFBhcmF0ZSIsImVtYWlsIjoicHJhdGlrcDFAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NSIsImlhdCI6MTYzODYyMjc4MCwiZXhwIjoxNjM4NjIzNjgwfQ.hRSR7rZ_N9ZqbQnw6AA2e5EmUGsGXrJQ8M5Rtf7I8Zw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"pratikp1@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/url-shortner/login",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"url-shortner",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFhNDZmODY4MDJiYWExNzk0Y2RhZDlhIn0sImlhdCI6MTYzODE2NjYyOX0.IT5JBQ8JJe1bl-pn9Jj5AdwP21_P182eElf3pzMBuPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/url-shortner/getUser",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"url-shortner",
+						"getUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"pratikparate707@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/url-shortner/forgotPassword",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"url-shortner",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All URLs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/url-shortner/getURLS",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"url-shortner",
+						"getURLS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate short URL from Long URl",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"longURL\":\"https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/url-shortner/shorten",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"url-shortner",
+						"shorten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Opening the shorturl",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-tasks-all.herokuapp.com/api/url-shortner/9H6pl5S6d",
+					"protocol": "https",
+					"host": [
+						"nodejs-tasks-all",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"url-shortner",
+						"9H6pl5S6d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
