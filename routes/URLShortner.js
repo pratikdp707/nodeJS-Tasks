@@ -297,7 +297,7 @@ router.post('/shorten', async(req, res) => {
                 res.json({success:true, Url});
             }else{
                 console.log("in else 1")
-                const shortURL = process.env.BaseURL + urlCode;
+                const shortURL = process.env.BaseURL + '/' +urlCode;
                 console.log("in else 2")
                 Url = new url({
                     longURL,
