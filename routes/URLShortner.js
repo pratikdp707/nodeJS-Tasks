@@ -267,7 +267,7 @@ router.post('/resetPassword/', async (req, res) => {
 //Get all the URLs shortened ---- api/url-shortner/getURLS
 router.get('/getURLS', async (req, res) => {
     try{
-        let urls = await url.find({}, "longURL shortUrl clicks");
+        let urls = await url.find({}, "longURL shortURL clicks");
 
         return res.json({
             success: true,
