@@ -29,6 +29,10 @@ app.use('/api/password-reset-task/', require('./routes/passwordReset'))
 //Task 5 -- URL Shortner Task
 app.use('/api/url-shortner', require('./routes/URLShortner'));
 
+//Inshorts Clone URL
+app.use('/api/news/', require('./routes/News'));
+
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
