@@ -1,5 +1,6 @@
 const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI(process.env.NEWS_API);
+//const newsapi = new NewsAPI(process.env.NEWS_API);
+const newsapi = new NewsAPI(process.env.NEWS_API, { corsProxyUrl: 'https://cors-anywhere.herokuapp.com/' });
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
