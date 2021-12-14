@@ -3,7 +3,6 @@ const express = require('express')
 require('dotenv').config();
 const cors = require("cors");
 connectToMongo();
-
 const app = express()
 const port = process.env.PORT || 4000;
 
@@ -29,8 +28,6 @@ app.use('/api/password-reset-task/', require('./routes/passwordReset'))
 //Task 5 -- URL Shortner Task
 app.use('/api/url-shortner', require('./routes/URLShortner'));
 
-//Inshorts Clone URL
-app.use('/api/news/', require('./routes/News'));
 
 
 app.listen(port, () => {
