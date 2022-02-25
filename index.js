@@ -1,12 +1,13 @@
 const connectToMongo = require('./dbConfig');
 const express = require('express')
-require('dotenv').config();
+const dotenv = require('dotenv')
 const cors = require("cors");
 connectToMongo();
 const app = express()
 const port = process.env.PORT || 4000;
 
 app.use(express.json());    
+dotenv.config();
 app.use(cors());
 //Availabel routes
 app.get('/', (req, res) => {
